@@ -11,7 +11,7 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 div.container {
     max-width: 80em;
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(220, 220, 220);
 }
 
 figure {
@@ -32,7 +32,7 @@ section {
 }
 
 body {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     line-height: 140%;
 }
