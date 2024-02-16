@@ -25,7 +25,8 @@ section {
 }
 
 body {
-    background-color: rgb(240,240,240);
+    margin: 0;
+	background-color: rgb(240,240,240);
     color : rgb(0,0,0);
     line-height: 140%
     
