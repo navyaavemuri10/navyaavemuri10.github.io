@@ -9,9 +9,9 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 }
 
 div.container {
+    background-color: rgb(255, 255, 255);
     max-width: 80em;
     margin: auto;
-    background-color: rgb(255, 255, 255);
 }
 
 figure {
