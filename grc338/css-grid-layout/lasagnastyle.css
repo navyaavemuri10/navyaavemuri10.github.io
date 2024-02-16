@@ -1,6 +1,5 @@
 /* CSS DOCUMENT */
 
-/* Reset styles */
 html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -9,14 +8,12 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
     font: inherit;
 }
 
-/* Container styles */
 div.container {
     max-width: 80em;
     margin: auto;
     background-color: rgb(255, 255, 255);
 }
 
-/* Figure styles */
 figure {
     display: grid;
     grid-template-columns: 3fr 0.8fr;
@@ -24,26 +21,22 @@ figure {
     margin-bottom: 4em;
 }
 
-/* Image styles */
 img {
     grid-column: 1;
     width: 100%; /* Please leave this line. */
     display: block;
 }
 
-/* Section styles */
 section {
     margin: 1.5rem;
 }
 
-/* Body styles */
 body {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(220, 220, 220);
     color: rgb(0, 0, 0);
     line-height: 140%;
 }
 
-/* Main styles */
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -51,7 +44,7 @@ main {
     margin-bottom: 3em;
 }
 
-/* Heading 1 styles */
+
 h1 {
     background-color: rgb(255, 140, 0);
     color: rgb(255, 255, 255);
