@@ -10,9 +10,11 @@ div.container {
 figure {
     display: grid;
     grid-template-columns: 3fr 0.8fr;
+	grid-column-gap: 1em;
+	margin-bottom: 4em;
 }
 
-figure img {
+img {
     grid-column: 1;
     width: 100%; /*Please leave this line.*/
      display: block;
@@ -67,7 +69,7 @@ h3 {
     padding-top: 1em;
 }
 
-figure figcaption {
+figcaption {
     grid-column: 2;
     padding: 2em 3.2em 2em ; 
     font-family: poppins, sans-serif;
