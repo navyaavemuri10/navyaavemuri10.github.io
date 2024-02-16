@@ -8,17 +8,16 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
     font: inherit;
 }
 
-div.container {
-    background-color: rgb(255, 255, 255);
-    max-width: 80em;
-    margin: auto;
-}
-
 figure {
     display: grid;
     grid-template-columns: 3fr 0.8fr;
     grid-column-gap: 1em;
     margin-bottom: 4em;
+}
+div.container {
+    background-color: rgb(255, 255, 255);
+    max-width: 80em;
+    margin: auto;
 }
 
 img {
