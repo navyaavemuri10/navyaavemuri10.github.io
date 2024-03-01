@@ -1,6 +1,6 @@
 /*CSS DOCUMENT*/
 
-html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;} /*My edited version of the Eric Meyer’s reset tool. You may want to include this in all of your future CSS files. */
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;} /*My edited version of the Eric Meyer’s reset tool. You may want to include this in all of your future CSS files. */
 
 
 div.home-container { 
@@ -20,7 +20,7 @@ body{
 	font-family: sans-serif;
 }
 
-main {
+main { 
 	padding: 2rem 2rem 5rem;
 	}
 
@@ -65,7 +65,6 @@ nav ul  {
 	
 ul li 	{
 	list-style-type: none;
-    	margin-bottom: 1rem;
 }
 
 figure {
@@ -111,6 +110,7 @@ nav ul li a {
 	background-color: rgb(0,0,245);
 	padding: 0.5rem 0.5rem 0.3rem;
 	}
+	
 
 p.slogan {
 	font-size: 4rem;
@@ -138,3 +138,4 @@ address {
 footer p {
 	margin: 0;
 }
+
