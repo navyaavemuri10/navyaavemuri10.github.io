@@ -127,8 +127,7 @@ nav ul li a {
 	}
 
 nav ul li.selected a {
-	color: rgb(27, 20, 100);
-	background-color: rgb(239, 233, 226); 
+	color: rgb(240, 240, 240); 
 	padding: 0.5rem 0.5rem 0.3rem;
 }	
 
