@@ -18,14 +18,16 @@ div.container {
 	min-height: 100vh;
 	max-width: 80em;
 	margin: auto;
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(239, 233, 226);
 }
 
 /* >>> IMPORTANT: you have to change the wrap the content of your home page (index) in a div with a class home-container to make it work. If you used a div with the class container on your home, you’ll only need to change the name of the class.  */
 
 body {
-	font-family: sans-serif;
-	background-color: rgb(220, 220, 220);
+	font-family: "bigmoore", serif;
+    font-weight: 400;
+    font-style: normal;
+	background-color: rgb(239, 233, 226);
 	}
 
 main {
@@ -37,10 +39,15 @@ img {
      display: block;
 }
 
+figure.hero img {
+    height: 30em;
+    object-fit: cover;
+}
+
 header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	background: rgb(220, 220, 220);
+	background: rgb(239, 233, 226);
 	padding: 1rem 1rem;
 	}
 
@@ -103,7 +110,7 @@ p.description {
 p.price {
 	grid-row: 1/2;
 	grid-column: 2/3;
-	color: rgb(255,0,0);
+	color: rgb(27, 20, 100);
 	text-align: right;
 	margin: 0.1rem;
 	}
@@ -120,15 +127,17 @@ nav ul li a {
 	}
 
 nav ul li.selected a {
-	color: rgb(10, 10, 10);
-	background-color: rgb(220, 220, 220); 
+	color: rgb(27, 20, 100);
+	background-color: rgb(239, 233, 226); 
 	padding: 0.5rem 0.5rem 0.3rem;
 }	
 
 p.slogan {
-	font-size: 4rem;
-	font-family: serif;
-	font-style: italic;
+	font-family: "charmonman", sans-serif;
+    font-size: 5em;
+    font-weight: 400;
+    text-align: center;
+    font-style: italic;
 	margin: 0.5rem 0.2rem 5rem;
 	color: rgb(250,250,250);	
 	}
@@ -140,11 +149,11 @@ footer {
   height: 3rem; 
   box-sizing: border-box;
   padding: 1rem 1rem;
-  background:rgb(255,255,80) ;
+  background:rgb(239, 233, 226) ;
 }
 
 address {
-	color: rgb(243, 147, 64);
+	color: rgb(10, 10, 10);
 	margin: 0.2rem;
 	}
 
@@ -153,7 +162,6 @@ footer p {
 }
 
 article {
-	background-color: rgb(0, 245, 255);
 	max-width: 40em;
 	margin: auto;
 }
