@@ -62,6 +62,13 @@ aside section {
 	margin-bottom: 2em;
 }
 
+aside figure {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
 /* Footer styling */
 footer {
 	text-align: left;
