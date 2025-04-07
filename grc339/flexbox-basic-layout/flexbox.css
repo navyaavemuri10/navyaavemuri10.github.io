@@ -1,0 +1,129 @@
+/*CSS DOCUMENT*/
+
+body {
+    font-family: sans-serif;
+    line-height: 1.4em;
+    color: #222;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Main page wrapper */
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+	gap: 2em;
+}
+
+header {
+    flex-basis: 100%;
+	flex-grow: 1;
+    flex-shrink: 0;
+}
+
+article {
+    flex-basis: 30em;
+	flex-grow: 1;
+    flex-shrink: 0;
+	min-width: none;
+}
+
+article figure {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+article ol {
+	padding: 0;
+	margin: 0;
+}
+aside {
+    flex-basis: 15em;
+	flex-grow: 1;
+    flex-shrink: 0;
+	gap: 2em;
+}
+
+aside section {
+    background-color: rgb(238, 237, 237);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-decoration: none;
+	margin-bottom: 2em;
+}
+
+/* Footer styling */
+footer {
+	text-align: left;
+    margin-top: 2rem;
+    flex-basis: 100%;
+	flex-grow: 1;
+    flex-shrink: 0;
+	border-top: 1px solid gray;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+
+a {
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+    article {
+        flex-basis: 45%; /* Adjust article width for medium screens */
+    }
+    aside {
+        flex-basis: 20%; /* Adjust aside width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    article {
+        flex-basis: 100%; /* Make article full-width on small screens */
+    }
+    aside {
+        flex-basis: 100%; /* Make aside full-width on small screens */
+    }
+    footer {
+        text-align: center; /* Center footer text on smaller screens */
+        padding-top: 1.5rem; /* Increase padding for better spacing on small screens */
+    }
+}
