@@ -24,6 +24,12 @@ section p {
     margin-top: 0;
 }
 
+section.personal-info ul li {
+	display:flex;
+	flex-wrap: wrap;
+	margin: 0 0 1em;
+}
+
 section ul {
     list-style: none;
     padding: 0;
@@ -45,10 +51,11 @@ section ul li input[type="text"],
 section ul li input[type="email"],
 section ul li input[type="tel"],
 section ul li select {
-    flex: 1 1 auto;
+    flex: 1 0 2em;
     box-sizing: border-box;
     padding: 0.4em;
 }
+
 
 section.order ul{
 	display: flex;
