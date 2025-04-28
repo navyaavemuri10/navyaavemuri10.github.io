@@ -1,0 +1,160 @@
+/*CSS document*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
+
+
+.container {
+    max-width: 60%;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+body {
+    line-height: 2em;
+    color: rgb(72, 110, 199);
+}
+
+header img {
+    width: 150px; 
+    height: auto;
+    padding-bottom: 2em;
+}
+
+img {
+    width: 100%;
+    display: block;
+    padding-bottom: 1em;
+}
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(72, 110, 199);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li 
+{
+    list-style-type: none;
+    display: inline;
+    margin-right: 1em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mainstory a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mainstory h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(72, 110, 199);
+    font-family: serif;
+    padding-bottom: .5em;
+}
+
+.mainstory p {
+    color: #555;
+}
+
+.secondarystory a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.secondarystory img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.secondarystory h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(72, 110, 199);
+    font-family: serif;
+}
+
+.secondarystory p {
+    color: #555;
+    padding-bottom: 2em;
+}
+
+.tertiarystory h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(72, 110, 199);
+    font-family: serif;
+    
+}
+
+.tertiarystory a{
+    text-decoration: none;
+}
+
+.tertiarystory p {
+    margin-top: 5px;
+    color: #555;
+}
+
+aside {
+    background-color: rgb(238, 220, 252);
+    padding: .5em;
+}
+
+article figcaption {
+    font-size: 16px;
+    color: gray;
+    font-style: italic;
+    padding-bottom: 3em;
+}
+
+article p {
+    color: black;
+    padding-bottom: 1.3em;
+}
+
+article h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(72, 110, 199);
+    font-family: serif;
+    padding-bottom: .5em;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+}
+
+header, nav, h2, p, figcaption {
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    nav ul li{
+        display: block;
+    }
+    footer {
+        padding-top: 1.5rem; 
+    }
+}
+
+
+
