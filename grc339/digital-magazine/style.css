@@ -3,16 +3,18 @@
 html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
 
 
-.container {
+div.container, div.home-container {
     max-width: 100%;
-    margin: auto;
-    font-family: sans-serif;
     padding: 1 1rem;
+    margin: auto;
 }
 
 body {
-    line-height: 2em;
+    line-height: 1.5em;
     color: rgb(72, 110, 199);
+    font-family: sans-serif;
+    padding: .5em;
+    margin: auto;
 }
 
 header img {
@@ -61,11 +63,11 @@ main {
     font-weight: bold;
     color: rgb(72, 110, 199);
     font-family: serif;
-    padding-bottom: .5em;
 }
 
 .mainstory p {
     color: rgb(85, 85, 85);
+    padding-top: .5em; 
 }
 
 .secondarystory a {
@@ -138,10 +140,11 @@ footer {
     padding-top: 1.25rem;
     border-top: 1px solid rgb(128, 128, 128);
     font-size: 0.875rem;
+    box-sizing: border-box;
 }
 
 
-header, nav, h2, p, figcaption {
+header, h2, p, figcaption {
     padding: 2em, 1em, 0rem;
 }
 
@@ -156,5 +159,103 @@ header, nav, h2, p, figcaption {
     
     footer {
         padding-top: 1.5rem; 
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    div.home-container {
+        max-width: 80em;
+        padding: 0 1em;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1em;
+    }
+
+    div.container {
+        max-width: 80em;
+        padding: 0 1em;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1em;
+    }
+
+    header, footer, nav {
+        grid-column: 1/3;
+    }
+
+    div.home-container main {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1em;
+    }
+
+    div.home-container aside {
+        background: none;
+        padding: 0;
+        margin-top:0;
+    }
+
+    div.container aside {
+        margin-top: 0;
+    }
+
+    section.mainstory {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        display: flex;
+    }
+
+
+    section.mainstory a figure {
+        flex: 1 0 12em;
+        display: flex;
+    }
+
+    section.mainstory a {
+        flex: 1 0 12em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.mainstory a figure img {
+        object-fit: cover;
+    }
+
+    section.mainstory a h2 {
+        flex: 0 0;
+    }
+
+    section.mainstory a p{
+        flex: 0 0 4em;
+    }
+    
+    /**
+    secondary */
+
+    section.secondarystory {
+        display: flex;
+    }
+
+    section.secondarystory a {
+        flex: 1 0 12em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.secondarystory a figure {
+        flex: 1 0 12em;
+        display: flex;
+    }
+
+    section.secondarystory a figure img {
+        object-fit: cover;
+    }
+
+    section.secondarystory a h2 {
+        flex: 0 0 1em;
+    }
+
+    section.secondarystory a p{
+        flex: 0 0 4em;
     }
 }
