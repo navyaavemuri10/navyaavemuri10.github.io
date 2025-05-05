@@ -4,9 +4,10 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 
 
 .container {
-    max-width: 60%;
+    max-width: 100%;
     margin: auto;
     font-family: sans-serif;
+    padding: 1 1rem;
 }
 
 body {
@@ -15,9 +16,9 @@ body {
 }
 
 header img {
-    width: 150px; 
+    width: 9.375rem; 
     height: auto;
-    padding-bottom: 2em;
+    padding: .5rem, 1rem;
 }
 
 img {
@@ -27,27 +28,27 @@ img {
 }
 
 nav {
-    margin-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
 nav a {
     text-decoration: none;
     color: rgb(72, 110, 199);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 nav ul li 
 {
     list-style-type: none;
-    display: inline;
+    display: block;
     margin-right: 1em;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 .mainstory a {
@@ -56,7 +57,7 @@ main {
 }
 
 .mainstory h2 {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
     color: rgb(72, 110, 199);
     font-family: serif;
@@ -64,7 +65,7 @@ main {
 }
 
 .mainstory p {
-    color: #555;
+    color: rgb(85, 85, 85);
 }
 
 .secondarystory a {
@@ -79,19 +80,19 @@ main {
 }
 
 .secondarystory h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: bold;
     color: rgb(72, 110, 199);
     font-family: serif;
 }
 
 .secondarystory p {
-    color: #555;
+    color: rgb(85, 85, 85);
     padding-bottom: 2em;
 }
 
 .tertiarystory h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: rgb(72, 110, 199);
     font-family: serif;
@@ -103,8 +104,8 @@ main {
 }
 
 .tertiarystory p {
-    margin-top: 5px;
-    color: #555;
+    margin-top: 0.3125rem;
+    color: rgb(85, 85, 85);
 }
 
 aside {
@@ -113,19 +114,19 @@ aside {
 }
 
 article figcaption {
-    font-size: 16px;
-    color: gray;
+    font-size: 1rem;
+    color: rgb(128, 128, 128);
     font-style: italic;
     padding-bottom: 3em;
 }
 
 article p {
-    color: black;
+    color: rgb(0, 0, 0);
     padding-bottom: 1.3em;
 }
 
 article h2 {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
     color: rgb(72, 110, 199);
     font-family: serif;
@@ -134,27 +135,26 @@ article h2 {
 
 footer {
     text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-    font-size: 14px;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgb(128, 128, 128);
+    font-size: 0.875rem;
 }
+
 
 header, nav, h2, p, figcaption {
-    padding: 1rem;
+    padding: 2em, 1em, 0rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 48rem) {
     .container {
-        max-width: 100%;
+        max-width: 60%;
     }
 
     nav ul li{
-        display: block;
+        display: inline;
     }
+    
     footer {
         padding-top: 1.5rem; 
     }
 }
-
-
-
