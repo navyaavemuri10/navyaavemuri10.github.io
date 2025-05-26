@@ -11,14 +11,16 @@ div.container, div.home-container {
 
 body {
     line-height: 1.5em;
-    color: rgb(72, 110, 199);
-    font-family: sans-serif;
+    color: rgb(128, 128, 128);
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     padding: .5em;
     margin: auto;
 }
 
 header img {
-    width: 9.375rem; 
+    width: 10rem; 
     height: auto;
     padding: .5rem, 1rem;
 }
@@ -60,14 +62,20 @@ main {
 
 .mainstory h2 {
     font-size: 3rem;
-    font-weight: bold;
     color: rgb(72, 110, 199);
-    font-family: serif;
+    font-family: "the-seasons", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 0.5em;
 }
 
 .mainstory p {
     color: rgb(85, 85, 85);
     padding-top: .5em; 
+}
+
+.mainstory img {
+    height: 50em;
 }
 
 .secondarystory a {
@@ -82,10 +90,12 @@ main {
 }
 
 .secondarystory h2 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: bold;
     color: rgb(72, 110, 199);
-    font-family: serif;
+    font-family: "the-seasons", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .secondarystory p {
@@ -94,10 +104,12 @@ main {
 }
 
 .tertiarystory h2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: rgb(72, 110, 199);
-    font-family: serif;
+    font-family: "the-seasons", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     
 }
 
@@ -111,7 +123,7 @@ main {
 }
 
 aside {
-    background-color: rgb(238, 220, 252);
+    background-color: rgb(237, 222, 191);
     padding: .5em;
 }
 
@@ -131,12 +143,13 @@ article h2 {
     font-size: 3rem;
     font-weight: bold;
     color: rgb(72, 110, 199);
-    font-family: serif;
+    font-family: "the-seasons", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     padding-bottom: .5em;
 }
 
 footer {
-    text-align: center;
     padding-top: 1.25rem;
     border-top: 1px solid rgb(128, 128, 128);
     font-size: 0.875rem;
