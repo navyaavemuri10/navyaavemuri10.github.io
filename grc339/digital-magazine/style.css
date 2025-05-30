@@ -60,7 +60,7 @@ main {
     color: inherit;
 }
 
-.mainstory h2 {
+.mainstory h2, section.title {
     font-size: 3rem;
     color: rgb(72, 110, 199);
     font-family: "the-seasons", sans-serif;
@@ -156,9 +156,106 @@ footer {
     box-sizing: border-box;
 }
 
-
 header, h2, p, figcaption {
     padding: 2em, 1em, 0rem;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main.photogallery {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: calc(40% + .5em);
+}
+
+nav.photogallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: .2em;
+	margin-left: 0;
+}
+
+figure.photogallery {
+	margin: 0;
+    padding-bottom: .5em;
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+input.photogallery {
+    display: none;
+}
+
+input:nth-of-type(1):checked ~ figure:nth-of-type(1),
+input:nth-of-type(2):checked ~ figure:nth-of-type(2),
+input:nth-of-type(3):checked ~ figure:nth-of-type(3),
+input:nth-of-type(4):checked ~ figure:nth-of-type(4),
+input:nth-of-type(5):checked ~ figure:nth-of-type(5),
+input:nth-of-type(6):checked ~ figure:nth-of-type(6),
+input:nth-of-type(7):checked ~ figure:nth-of-type(7),
+input:nth-of-type(8):checked ~ figure:nth-of-type(8){
+    opacity: 1;
+}
+
+main.newsletter {
+	grid-column: span 2;
+}
+
+section.personal-info ul, section.personalization ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+section.personalization ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.personalization ul li {
+	margin: 0 1em 0 0;
+	flex: 1 0 15em;
+}
+
+section.personal-info ul li {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1em;
+}
+
+section.personal-info ul li label {
+	flex: 0 0 8em;
+}
+
+section.personal-info ul li input[type="text"],
+section ul li input[type="email"],
+section ul li input[type="tel"],
+section ul li select {
+	flex: 4 0 22em;
+	box-sizing: border-box;
+}
+
+section.personal-info, section.personalization {
+    padding: 0.5em;
+	margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+button {
+	background-color: rgb(161, 184, 237);
+	border: none;
+	padding: 15px 32px;
+	border-radius: 8px;
+	margin-bottom: 1em;
+}
+
+button:hover {
+	background-color: rgb(72, 110, 199);
 }
 
 @media (min-width: 48rem) {
@@ -270,5 +367,9 @@ header, h2, p, figcaption {
 
     section.secondarystory a p{
         flex: 0 0 4em;
+    }
+
+    .photo-gallery-nav {
+        grid-template-columns: repeat(8, 1fr);
     }
 }
