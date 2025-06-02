@@ -13,20 +13,29 @@
 	</head>
 	<body>
 		<div class="container">
-			<header>
+			<header> 
 				<a href="index.html">
-					<img src="socialclub.svg" alt="Social Club Logo" />
-				</a>
-                <nav>
-                    <ul>
-                       <li> <a href="/style/">Entertaining</a> </li>
-                       <li> <a href="/music/">Music</a> </li>
-                       <li> <a href="/wellbeing/">Decor</a> </li>
-                         <li> <a href="/sports/">Themes</a> </li>
-                         <li> <a href="/opinion/">Etiquette</a> </li>
-                         <li> <a href="newsletter.html">Subscribe</a> </li>
-                   </ul>
-			</header>
+				   <img src="socialclub-light.svg" alt="Social Club Logo." class="logo-light" />
+				   <img src="socialclub-dark.svg" alt="Social Club Logo." class="logo-dark" />
+			   </a>
+				<div class="theme-toggle">
+				   <label class="theme-switch" for="checkbox">
+					   <input type="checkbox" id="checkbox" />
+					   <div class="slider round"></div>
+				 </label>
+				 <em>Change Mode</em>
+			   </div>
+				<nav>
+				   <ul>
+					  <li> <a href="/style/">Entertaining</a> </li>
+					  <li> <a href="/music/">Music</a> </li>
+					  <li> <a href="/wellbeing/">Decor</a> </li>
+						<li> <a href="/sports/">Themes</a> </li>
+						<li> <a href="/opinion/">Etiquette</a> </li>
+						<li> <a href="newsletter.html">Subscribe</a> </li>
+				  </ul>
+				</nav>
+		   </header>
             <main class = photogallery>
 			<input type="radio" name="item" id="photo1" checked="checked">
 			<input type="radio" name="item" id="photo2">
@@ -53,19 +62,19 @@
 					<figcaption>Al-fresco grazing in full colour—savory pastries, vibrant produce and share-ready skewers on a rustic garden table</figcaption> 
 				</figure>
 				<figure class="photogallery">
-					<img src="food-photo-5.jpg" alt="Rustic appetizer spread with charcuterie, figs tart, deviled eggs, olives, nuts and fresh veggie crudités">
+					<img src="food-photo-5.jpg" alt="Rustic appetizer spread with charcuterie, figs tart, deviled eggs, olives, nuts and fresh veggie crudités.">
 					<figcaption>A laid-back grazing table—cured meats, creamy dips and garden-bright produce invite guests to nibble at leisure</figcaption>
 				</figure>
 				<figure class="photogallery">
-					<img src="food-photo-6.jpg" alt="Overflowing Mediterranean board of breads, dips, tinned seafood, olives, crunchy veggies and skewer bites">
+					<img src="food-photo-6.jpg" alt="Overflowing Mediterranean board of breads, dips, tinned seafood, olives, crunchy veggies and skewer bites.">
 					<figcaption>Layered colors and textures make this mezze-style platter a build-your-own adventure of bold, briny flavors</figcaption>
 				</figure>
 				<figure class="photogallery">
-					<img src="food-photo-7.jpg" alt="Festive table set with florals, jalapeño fried chicken, beet-dyed eggs, corn-pepper casserole and rainbow salad">
+					<img src="food-photo-7.jpg" alt="Festive table set with florals, jalapeño fried chicken, beet-dyed eggs, corn-pepper casserole and rainbow salad.">
 					<figcaption>A vibrant fiesta feast: jewel-toned dishes and fresh blooms turn dinner into a joyful celebration</figcaption> 
 				</figure>
 				<figure class="photogallery">
-					<img src="food-photo-8.jpg" alt="Valentine's day style spread covering various dietary restrictions">
+					<img src="food-photo-8.jpg" alt="Valentine's day style spread covering various dietary restrictions.">
 					<figcaption>Valentine's day spread</figcaption> 
 				</figure>
 			</main>
@@ -84,16 +93,16 @@
 					<img src="food-photo-4.jpg" alt="Sun-drenched picnic table with quiche, pinwheel pastries, Scotch egg, baguette, olives, fruit salad and chicken skewers.">
 				</label>
 				<label for="photo5">
-					<img src="food-photo-5.jpg" alt="Rustic appetizer spread with charcuterie, figs tart, deviled eggs, olives, nuts and fresh veggie crudités">
+					<img src="food-photo-5.jpg" alt="Rustic appetizer spread with charcuterie, figs tart, deviled eggs, olives, nuts and fresh veggie crudités.">
 				</label>
 				<label for="photo6">
-					<img src="food-photo-6.jpg" alt="Overflowing Mediterranean board of breads, dips, tinned seafood, olives, crunchy veggies and skewer bites">
+					<img src="food-photo-6.jpg" alt="Overflowing Mediterranean board of breads, dips, tinned seafood, olives, crunchy veggies and skewer bites.">
 				</label>
 				<label for="photo7">
-					<img src="food-photo-7.jpg" alt="Festive table set with florals, jalapeño fried chicken, beet-dyed eggs, corn-pepper casserole and rainbow salad">
+					<img src="food-photo-7.jpg" alt="Festive table set with florals, jalapeño fried chicken, beet-dyed eggs, corn-pepper casserole and rainbow salad.">
 				</label>
 				<label for="photo8">
-					<img src="food-photo-8.jpg" alt="Valentine's day style spread covering various dietary restrictions">
+					<img src="food-photo-8.jpg" alt="Valentine's day style spread covering various dietary restrictions.">
 				</label>
 			</nav>
 
@@ -101,5 +110,44 @@
 				<p>All rights Reserved</p>
 			</footer>
 		</div>
+		<script>
+			// Get the toggle switch element
+	  const toggleSwitch = document.querySelector('#checkbox');
+	  
+	  // Function to switch theme
+	  function switchTheme(e) {
+		  if (e.target.checked) {
+			  document.documentElement.setAttribute('data-theme', 'dark');
+			  localStorage.setItem('theme', 'dark');
+		  } else {
+			  document.documentElement.setAttribute('data-theme', 'light');
+			  localStorage.setItem('theme', 'light');
+		  }    
+	  }
+	  
+	  // Add event listener to the toggle switch
+	  toggleSwitch.addEventListener('change', switchTheme, false);
+	  
+	  // Check for saved theme preference or default to 'light' mode
+	  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+	  
+	  if (currentTheme) {
+		  document.documentElement.setAttribute('data-theme', currentTheme);
+	  
+		  if (currentTheme === 'dark') {
+			  toggleSwitch.checked = true;
+		  }
+	  } else {
+		  // If no theme is saved, check system preference
+		  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			  document.documentElement.setAttribute('data-theme', 'dark');
+			  toggleSwitch.checked = true;
+			  localStorage.setItem('theme', 'dark');
+		  } else {
+			  document.documentElement.setAttribute('data-theme', 'light');
+			  localStorage.setItem('theme', 'light');
+		  }
+	  }
+		 </script>
 	</body>
 </html>

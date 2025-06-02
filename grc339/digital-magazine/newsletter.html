@@ -13,28 +13,36 @@
 	</head>
 	<body>
 		<div class="container">
-			<header>
-				<a href="index.html">
-					<img src="socialclub.svg" alt="Social Club Logo" />
-				</a>
-                <nav>
-                    <ul>
-                       <li> <a href="/style/">Entertaining</a> </li>
-                       <li> <a href="/music/">Music</a> </li>
-                       <li> <a href="/wellbeing/">Decor</a> </li>
-                         <li> <a href="/sports/">Themes</a> </li>
-                         <li> <a href="/opinion/">Etiquette</a> </li>
-                         <li> <a href="newsletter.html">Subscribe</a> </li>
-                   </ul>
-                   </nav>
-			</header>
+			<header> 
+            <a href="index.html">
+               <img src="socialclub-light.svg" alt="Social Club Logo." class="logo-light" />
+               <img src="socialclub-dark.svg" alt="Social Club Logo." class="logo-dark" />
+           </a>
+            <div class="theme-toggle">
+               <label class="theme-switch" for="checkbox">
+                   <input type="checkbox" id="checkbox" />
+                   <div class="slider round"></div>
+             </label>
+             <em>Change Mode</em>
+           </div>
+            <nav>
+               <ul>
+                  <li> <a href="/style/">Entertaining</a> </li>
+                  <li> <a href="/music/">Music</a> </li>
+                  <li> <a href="/wellbeing/">Decor</a> </li>
+                    <li> <a href="/sports/">Themes</a> </li>
+                    <li> <a href="/opinion/">Etiquette</a> </li>
+                    <li> <a href="newsletter.html">Subscribe</a> </li>
+              </ul>
+            </nav>
+       </header>
             <main class="newsletter">
                 <form>
                    <section class="title">
                       <h2>Join our hosting community!</h2>
                    </section>
                    <section class="personal-info">
-                      <h3>YOUR DETAILS</h3>
+                      <h3>Your Details</h3>
                       <ul>
                          <li><label for="name">Name:</label> <input type="text" name="name" id="name" placeholder="your full name" /></li>
                          <li><label for="email">Email:</label> <input type="email" name="email" id="email" placeholder="confirmation email" /></li>
@@ -42,7 +50,7 @@
                       </ul>
                    </section>
                    <section  class="personalization">
-                      <h3>HOSTING PREFERENCES</h3>
+                      <h3>Hosting Preferences</h3>
                       <p class="personalization">Tell us about your hosting style! We'll send you tailored content for your entertaining needs.</p>
                       <ul>
                          <li><input type="checkbox" id="dinner-parties" value="dinner-parties" /> <label for="dinner-parties">Dinner Parties</label></li>
@@ -66,5 +74,44 @@
 				</p>
 			</footer>
 		</div>
+      <script>
+         // Get the toggle switch element
+   const toggleSwitch = document.querySelector('#checkbox');
+   
+   // Function to switch theme
+   function switchTheme(e) {
+       if (e.target.checked) {
+           document.documentElement.setAttribute('data-theme', 'dark');
+           localStorage.setItem('theme', 'dark');
+       } else {
+           document.documentElement.setAttribute('data-theme', 'light');
+           localStorage.setItem('theme', 'light');
+       }    
+   }
+   
+   // Add event listener to the toggle switch
+   toggleSwitch.addEventListener('change', switchTheme, false);
+   
+   // Check for saved theme preference or default to 'light' mode
+   const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+   
+   if (currentTheme) {
+       document.documentElement.setAttribute('data-theme', currentTheme);
+   
+       if (currentTheme === 'dark') {
+           toggleSwitch.checked = true;
+       }
+   } else {
+       // If no theme is saved, check system preference
+       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+           document.documentElement.setAttribute('data-theme', 'dark');
+           toggleSwitch.checked = true;
+           localStorage.setItem('theme', 'dark');
+       } else {
+           document.documentElement.setAttribute('data-theme', 'light');
+           localStorage.setItem('theme', 'light');
+       }
+   }
+      </script>
 	</body>
 </html>

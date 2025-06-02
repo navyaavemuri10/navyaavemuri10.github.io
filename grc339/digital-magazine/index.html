@@ -18,8 +18,16 @@
       <div class="home-container">
          <header> 
             <a href="index.html">
-            <img src="socialclub.svg" alt="Logo">
-            </a>
+               <img src="socialclub-light.svg" alt="Social Club Logo." class="logo-light" />
+               <img src="socialclub-dark.svg" alt="Social Club Logo." class="logo-dark" />
+           </a>
+            <div class="theme-toggle">
+               <label class="theme-switch" for="checkbox">
+                   <input type="checkbox" id="checkbox" />
+                   <div class="slider round"></div>
+             </label>
+             <em>Change Mode</em>
+           </div>
             <nav>
                <ul>
                   <li> <a href="/style/">Entertaining</a> </li>
@@ -29,12 +37,13 @@
                     <li> <a href="/opinion/">Etiquette</a> </li>
                     <li> <a href="newsletter.html">Subscribe</a> </li>
               </ul>
+            </nav>
        </header>
          <main>
             <section class = "mainstory">
                <a href="mainstory.html">
                   <figure>
-                     <img src="artofparty.jpg" alt="A yellow and blue dinner spread">
+                     <img src="artofparty.jpg" alt="A yellow and blue dinner spread.">
                   </figure>
                      <h2> 
                         The Art of the Perfect Party
@@ -46,7 +55,7 @@
             <section class = "secondarystory">
                <a href="#">
                   <figure>
-                     <img src="barcart.jpg" alt="Aesthetic bar cart set up in front of a pool">
+                     <img src="barcart.jpg" alt="Aesthetic bar cart set up in front of a pool.">
                   </figure>
                      <h2> 
                         Stocking Essentials Without Breaking the Bank
@@ -58,7 +67,7 @@
             <section class = "secondarystory">
                <a href="#">
                   <figure>
-                     <img src="casualchic.jpg" alt="Brightly colored dresses ">
+                     <img src="casualchic.jpg" alt="Brightly colored dresses.">
                   </figure>
                      <h2> 
                         What 'Casual Chic' Actually Means and Other Party Invitation Mysteries
@@ -70,7 +79,7 @@
             <section class = "secondarystory">
                <a href="photogallery.html">
                   <figure>
-                     <img src="dietary.jpg" alt="Spread of pizza, pasta, drinks, and lemons">
+                     <img src="dietary.jpg" alt="Spread of pizza, pasta, drinks, and lemons.">
                   </figure>
                      <h2> 
                         Accommodating Dietary Restrictions Without Losing Your Mind </h2>
@@ -81,7 +90,7 @@
             <section class = "secondarystory">
                <a href="#">
                   <figure>
-                     <img src="candle.jpg" alt="An array of candles at the center of table">
+                     <img src="candle.jpg" alt="An array of candles at the center of table.">
                   </figure>
                      <h2> 
                         When the Lights Go Out But the Fun Doesn't </h2>
@@ -92,7 +101,7 @@
             <section class = "secondarystory">
                <a href="#">
                   <figure>
-                     <img src="dj.jpg" alt="A person on a Pioneer DJ mix set">
+                     <img src="dj.jpg" alt="A person on a Pioneer DJ mix set.">
                   </figure>
                      <h2> 
                         How to DJ Your Party Without That One Friend Hijacking the Music
@@ -159,13 +168,6 @@
                     Templates and timing guidance for post-event appreciation that maintains your reputation as someone worth inviting back</p>
                </a>
             </section/>
-            <section class = "tertiarystory">
-               <h2>
-                  <a href="newsletter.html">
-                    Subscribe to our newsletter for more!
-                  </a>
-                </h2>
-            </section>
          </aside> 
          <footer>
             <p> 
@@ -174,4 +176,43 @@
          </footer>
       </div>
    </body>
+   <script>
+      // Get the toggle switch element
+const toggleSwitch = document.querySelector('#checkbox');
+
+// Function to switch theme
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }    
+}
+
+// Add event listener to the toggle switch
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+// Check for saved theme preference or default to 'light' mode
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+} else {
+    // If no theme is saved, check system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleSwitch.checked = true;
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+}
+   </script>
 </html>
