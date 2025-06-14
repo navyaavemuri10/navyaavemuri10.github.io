@@ -13,6 +13,45 @@
       <meta http-equiv="Expires" content="0" />
       <link rel="stylesheet" href="https://use.typekit.net/bcz8smp.css">
       <link rel="stylesheet" href="https://use.typekit.net/bcz8smp.css">
+      <script>
+      // Get the toggle switch element
+const toggleSwitch = document.querySelector('#checkbox');
+
+// Function to switch theme
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }    
+}
+
+// Add event listener to the toggle switch
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+// Check for saved theme preference or default to 'light' mode
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+} else {
+    // If no theme is saved, check system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleSwitch.checked = true;
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+}
+   </script>
    </head>
    <body>
       <div class="home-container">
@@ -176,43 +215,4 @@
          </footer>
       </div>
    </body>
-   <script>
-      // Get the toggle switch element
-const toggleSwitch = document.querySelector('#checkbox');
-
-// Function to switch theme
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }    
-}
-
-// Add event listener to the toggle switch
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-// Check for saved theme preference or default to 'light' mode
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-} else {
-    // If no theme is saved, check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggleSwitch.checked = true;
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
-}
-   </script>
 </html>
