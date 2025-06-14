@@ -1,58 +1,56 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <!-- You need this to proper scale in actual mobile devices.-->
-      <link rel="stylesheet" href="style.css">
-      <title>Social Club</title>
-      <!-- This will be replaced with the actual name of the publication later.  -->
-      <!-- Helpful meta tags to fight GitHub aggresive caching-->
-      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-      <meta http-equiv="Pragma" content="no-cache" />
-      <meta http-equiv="Expires" content="0" />
-      <link rel="stylesheet" href="https://use.typekit.net/bcz8smp.css">
-      <link rel="stylesheet" href="https://use.typekit.net/bcz8smp.css">
-      <script>
-      // Get the toggle switch element
-const toggleSwitch = document.querySelector('#checkbox');
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Social Club</title>
 
-// Function to switch theme
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }    
-}
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://use.typekit.net/bcz8smp.css">
 
-// Add event listener to the toggle switch
-toggleSwitch.addEventListener('change', switchTheme, false);
+   <!-- Prevent aggressive caching -->
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+   <meta http-equiv="Pragma" content="no-cache" />
+   <meta http-equiv="Expires" content="0" />
 
-// Check for saved theme preference or default to 'light' mode
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+   <!-- Theme toggle script -->
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const toggleSwitch = document.querySelector('#checkbox');
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+         function switchTheme(e) {
+            if (e.target.checked) {
+               document.documentElement.setAttribute('data-theme', 'dark');
+               localStorage.setItem('theme', 'dark');
+            } else {
+               document.documentElement.setAttribute('data-theme', 'light');
+               localStorage.setItem('theme', 'light');
+            }
+         }
 
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-} else {
-    // If no theme is saved, check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggleSwitch.checked = true;
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
-}
+         toggleSwitch.addEventListener('change', switchTheme, false);
+
+         const currentTheme = localStorage.getItem('theme');
+
+         if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'dark') {
+               toggleSwitch.checked = true;
+            }
+         } else {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+               document.documentElement.setAttribute('data-theme', 'dark');
+               toggleSwitch.checked = true;
+               localStorage.setItem('theme', 'dark');
+            } else {
+               document.documentElement.setAttribute('data-theme', 'light');
+               localStorage.setItem('theme', 'light');
+            }
+         }
+      });
    </script>
-   </head>
+</head>
    <body>
       <div class="home-container">
          <header> 
